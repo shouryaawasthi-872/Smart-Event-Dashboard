@@ -2,7 +2,7 @@ const eventForm = document.getElementById('event-form');
 const eventList = document.getElementById('event-list');
 const keyDisplay = document.getElementById('key-display');
 const clearBtn = document.getElementById('clear-all');
-
+const sampleBtn = document.getElementById('add-sample');   
 
 eventForm.addEventListener('submit', (e) => {
     e.preventDefault();
@@ -37,6 +37,9 @@ function createEventCard(title, date, category, desc) {
 
     eventList.appendChild(card);
 }
+sampleBtn.addEventListener('click', () => {
+    createEventCard('Sample Event', '2026-12-31', 'Work', 'This is a sample event description.');
+});
 
 
 clearBtn.addEventListener('click', () => {
@@ -46,4 +49,5 @@ clearBtn.addEventListener('click', () => {
 
 document.addEventListener('keydown', (e) => {
     keyDisplay.textContent = e.key;
+
 });
