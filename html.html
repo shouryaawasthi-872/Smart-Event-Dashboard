@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Event Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1> Smart Event Dashboard</h1>
+    </header>
+
+    <div class="main-layout">
+        <aside class="card sidebar">
+            <h2>Add New Event</h2>
+            <form id="event-form">
+                <label>Event Title:</label>
+                <input type="text" id="title" placeholder="e.g. Tech Conference" required>
+                
+                <label>Event Date:</label>
+                <input type="date" id="date" required>
+                
+                <label>Category:</label>
+                <select id="category">
+                    <option value="Social">Social</option>
+                    <option value="Conference">Conference</option>
+                    <option value="Workshop">Workshop</option>
+                </select>
+                
+                <label>Description:</label>
+                <textarea id="description" rows="4"></textarea>
+                
+                <button type="submit" class="gradient-btn">Add Event</button>
+            </form>
+        </aside>
+
+        <section class="card display-area">
+            <h2>My Events</h2>
+            <div class="action-buttons">
+                <button id="clear-all" class="gradient-btn secondary">Clear All Events</button>
+                <button id="add-sample" class="gradient-btn secondary">Add Sample Events</button>
+            </div>
+            <div id="event-list" class="event-grid">
+                </div>
+        </section>
+    </div>
+
+    <footer class="card footer-section">
+        <h2>DOM Manipulation Demo</h2>
+        <div class="demo-box">
+            <p>You Pressed: <span id="key-display">None</span></p>
+        </div>
+    </footer>
+
+    <script src="java.js"></script>
+</body>
+</html>
